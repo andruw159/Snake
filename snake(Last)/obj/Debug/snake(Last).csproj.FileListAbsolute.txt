@@ -1,0 +1,10 @@
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\bin\Debug\snake(Last).exe.config
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\bin\Debug\snake(Last).exe
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\bin\Debug\snake(Last).pdb
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).csproj.AssemblyReference.cache
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake_Last_.Snake.resources
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake_Last_.Properties.Resources.resources
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).csproj.GenerateResource.cache
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).csproj.CoreCompileInputs.cache
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).exe
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).pdb
