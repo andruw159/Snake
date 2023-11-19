@@ -26,17 +26,18 @@ namespace snake_Last_
 
         public void ReiniciarJuego()
         {
-            foreach (PictureBox Serpiente in lista) { this.Controls.Remove(Serpiente); }
+           foreach (PictureBox Serpiente in lista) { this.Controls.Remove(Serpiente); }
             this.Controls.Remove(comida); //No va remove comida sino que hay que hacer remove la serepiente?
-            iniciarJuego();
+           iniciarJuego();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
+
             int nx = lista[0].Location.X;
             int ny = lista[0].Location.Y;
             lista[0].Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("Head" + direccion);//Cabeza de la serpiente
-
 
             for (int i = lista.Count - 1; i >= 0; i--)
             {
@@ -45,7 +46,7 @@ namespace snake_Last_
                     if (direccion == "Right") nx = nx + sizePiezaPrincipal;
                     else if (direccion == "Left") nx = nx - sizePiezaPrincipal;
                     else if (direccion == "Up") ny = ny - sizePiezaPrincipal;
-                    else if (direccion == "Down") ny = ny - sizePiezaPrincipal;
+                    else if (direccion == "Down") ny = ny + sizePiezaPrincipal;
                     lista[0].Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("Head" + direccion);//Cabeza de la serpiente
                     lista[0].Location = new Point(nx, ny);
                 }
@@ -53,11 +54,13 @@ namespace snake_Last_
                 else
                 {
                     //Intercambio de seguimiento
+
                     lista[i].Location = new Point((lista[i - 1].Location.X), (lista[i].Location.Y));
                     lista[i].Location = new Point((lista[i].Location.X), (lista[i - 1].Location.Y));
+
                 }
             }
-            for (int contarPiezas = 1; contarPiezas <= lista.Count; contarPiezas++)
+            for (int contarPiezas = 1; contarPiezas < lista.Count; contarPiezas++)
             {
                 if (lista[contarPiezas].Bounds.IntersectsWith(comida.Bounds))
                 {
@@ -75,13 +78,14 @@ namespace snake_Last_
             {
                 ReiniciarJuego();
             }
+           
 
             //colision con el cuerpo
             for (int contarPiezas = 1; contarPiezas < lista.Count; contarPiezas++)
             {
                 if (lista[0].Bounds.IntersectsWith(lista[contarPiezas].Bounds))
                 {
-                    ReiniciarJuego();
+                   
                 }
             }
         }
@@ -132,7 +136,7 @@ namespace snake_Last_
             //Piezas iniciales
             for (int i = 2; 0 <= i; i--)
             {
-                crearSnake(lista, this, (i * sizePiezaPrincipal) + 100, 80);
+                crearSnake(lista, this, (i * sizePiezaPrincipal) + 70, 80);
             }
             crearComida();
         }
