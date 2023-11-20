@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,43 +13,29 @@ namespace snake_Last_
 {
     public partial class Registro : Form
     {
-        //PRUEBA ACUMULAR PUNTOS---------
+        //Se llama al Form Snake
         Snake snakeForm;  
-        //PRUEBA MANTENER----------------
         
-        //-------------------------------
-
-
-
 
         public Registro(Snake snake)
         {
             InitializeComponent();
             snakeForm = snake;
             snakeForm.PuntajeActualizado += SnakeForm_PuntajeActualizado;
-            //PRUEBA MANTENER---------
-           
-            //------------------------
+                   }
 
-        }
-
-        //PRUEBA DE ACULAR PUNTOS -------------------
+     
         public void SnakeForm_PuntajeActualizado(object sender, EventArgs e)
         {
-            
-            // Manejador de eventos que se ejecuta cuando se actualiza el puntaje
             // Actualiza la celda en el DataGridView con el nuevo puntaje
             int n = dataGridView1.Rows.Count - 1; // Obtén el índice de la última fila
             
         }
 
-        //PRUEBA ENTRE DATAS----------
-
         
-        //-------------------------------------
 
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
+        public void btnRegistrar_Click(object sender, EventArgs e)
         {
             
             
@@ -61,11 +48,21 @@ namespace snake_Last_
 
             //Limpiar el TextBox
             txtRegistro.Text = " ";
+            //Se guarda la informacion en un archivo txt
+            StreamWriter registrar = new StreamWriter(@"C:\Users\andre\source\repos\snake(Last)\snake(Last)\Archivo_Puntajes.txt", true);
 
-            //PRUEBA ENTRE DATAS------------
-            
+            try
+            {
+                registrar.WriteLine("\n NickName:  "+ dataGridView1.Rows[n].Cells[0].Value);
+                registrar.WriteLine("\n Puntaje: " + dataGridView1.Rows[n].Cells[1].Value);
+                registrar.WriteLine("\n Fecha: " + DateTime.Now.ToString());
+            }
+            catch
+            {
+                MessageBox.Show("Error");
+            }
+            registrar.Close();
 
-            //------------
 
             PlayAgain prg = new PlayAgain();
             prg.ShowDialog();

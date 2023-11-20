@@ -36,14 +36,17 @@
             // lblPlayAgain
             // 
             this.lblPlayAgain.AutoSize = true;
-            this.lblPlayAgain.Location = new System.Drawing.Point(169, 49);
+            this.lblPlayAgain.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlayAgain.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayAgain.Location = new System.Drawing.Point(152, 49);
             this.lblPlayAgain.Name = "lblPlayAgain";
-            this.lblPlayAgain.Size = new System.Drawing.Size(79, 16);
+            this.lblPlayAgain.Size = new System.Drawing.Size(128, 27);
             this.lblPlayAgain.TabIndex = 0;
             this.lblPlayAgain.Text = "Play Again?";
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(73, 122);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(101, 28);
@@ -54,6 +57,7 @@
             // 
             // btnMenu
             // 
+            this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.Location = new System.Drawing.Point(246, 122);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(101, 28);
@@ -66,6 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::snake_Last_.Properties.Resources.backgroud;
             this.ClientSize = new System.Drawing.Size(438, 227);
             this.Controls.Add(this.btnMenu);
             this.Controls.Add(this.button1);

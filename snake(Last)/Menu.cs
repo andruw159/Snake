@@ -32,7 +32,7 @@ namespace snake_Last_
         private void btnPuntajes_Click(object sender, EventArgs e)
         {
             //Muestra formulario donde se guardan los datos del usuario, puntaje y fecha.
-            Puntajes pnt = new Puntajes();
+            regPuntajtes pnt = new regPuntajtes();
             this.Hide();
             pnt.ShowDialog();
             this.Show();

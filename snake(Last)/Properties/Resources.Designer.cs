@@ -73,6 +73,16 @@ namespace snake_Last_.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroud {
+            get {
+                object obj = ResourceManager.GetObject("backgroud", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap body {
             get {
                 object obj = ResourceManager.GetObject("body", resourceCulture);

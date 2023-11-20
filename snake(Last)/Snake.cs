@@ -15,7 +15,7 @@ namespace snake_Last_
         List<PictureBox> lista = new List<PictureBox>();
         int sizePiezaPrincipal = 15;
         int tiempo = 10;
-        PictureBox comida = new PictureBox();
+        PictureBox comida = new PictureBox();//La comida
         String direccion = "Right"; //Dirección de la serpiente
         
 
@@ -28,21 +28,17 @@ namespace snake_Last_
 
         // Propiedad pública para acceder al puntaje desde el formulario principal
         public int Puntaje { get; private set; }
-
+        //Se llama al Form Registro
         Registro registroForm;
 
-        //-------------------------------
-        //PRUEBA MANTENER PUNTOS-----------
-        
-        //--------------------------------
 
         public Snake()
         {
             InitializeComponent();
             iniciarJuego();
-            //PRUEBA PUNTAJE-------
+           
             registroForm = new Registro(this);
-            //---------------------
+          
 
 
         }
@@ -64,11 +60,9 @@ namespace snake_Last_
                 // Eliminar la comida
                 this.Controls.Remove(comida);
 
-            //Prueba acumular puntaje----
-            PuntajeActualizado?.Invoke(this, EventArgs.Empty);
-            // Invocar el evento JuegoReiniciado para indicar que el juego se ha reiniciado
+                //Prueba acumular puntaje----
+                PuntajeActualizado?.Invoke(this, EventArgs.Empty);
             
-            //----------------------------------
 
         }
 
@@ -84,6 +78,7 @@ namespace snake_Last_
             {
                 if (i == 0)
                 {
+                    //Dependiendo de la dirección se mueve la cabeza
                     if (direccion == "Right") nx = nx + sizePiezaPrincipal;
                     else if (direccion == "Left") nx = nx - sizePiezaPrincipal;
                     else if (direccion == "Up") ny = ny - sizePiezaPrincipal;
@@ -101,10 +96,6 @@ namespace snake_Last_
 
                 }
 
-                //PRUEBA COLISION CON EL CUERPO--------
-                // Verificar colisión con el cuerpo
-                
-                //-----------------------
             }
             for (int contarPiezas = 1; contarPiezas < lista.Count; contarPiezas++)
             {
@@ -113,12 +104,12 @@ namespace snake_Last_
                     this.Controls.Remove(comida); //remueve la comida
                     tiempo = Convert.ToInt32(timer1.Interval);//aumenta el tiempo
                     if (tiempo > 10) { timer1.Interval = tiempo - 10; }
-                    lblPuntos.Text = (Convert.ToInt32(lblPuntos.Text) + 1).ToString(); //Necesito acumular estos datos
+                    lblPuntos.Text = (Convert.ToInt32(lblPuntos.Text) + 1).ToString(); //Puntos del usuario
 
-                    //PRUEBA DE ACUMULAR PUNTOS-------
+                   //Acumulador de puntaje
                     Puntaje++;
                     PuntajeActualizado?.Invoke(this, EventArgs.Empty);
-                    //--------------------------------
+                    
 
 
                     crearComida();//crea nueva comida
@@ -141,7 +132,7 @@ namespace snake_Last_
                 }
             }
         }
-
+        //Metodo para poder mover la Snake con la fechas
         private void MoverPieza(object sender, KeyEventArgs e)
         {
             direccion = ((e.KeyCode & Keys.Up) == Keys.Up) ? "Up" : direccion;
@@ -150,18 +141,18 @@ namespace snake_Last_
             direccion = ((e.KeyCode & Keys.Right) == Keys.Right) ? "Right" : direccion;
 
         }
-
+        //Metodo que crea el cuerpo de la Snake
         public void crearSnake(List<PictureBox> listaPelota, Form formulario, int posicionx, int posiciony)
         {
             PictureBox pb = new PictureBox();
             pb.Location = new Point(posicionx, posiciony);
-            pb.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("body");
+            pb.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("body");//Se le asigna la imagen al cuerpo
             pb.BackColor = Color.Transparent;
             pb.SizeMode = PictureBoxSizeMode.AutoSize;
             listaPelota.Add(pb);
             formulario.Controls.Add(pb);
         }
-
+        //Crea la comida aleatoriamente
         private void crearComida()
         {
             Random rnd = new Random();
@@ -170,14 +161,14 @@ namespace snake_Last_
 
             PictureBox pb = new PictureBox();
             pb.Location = new Point(entx, enty);
-            pb.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("manzanaa");
+            pb.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("manzanaa");//Se le asigna la imagen a la comida
             pb.BackColor = Color.Transparent;
             pb.SizeMode = PictureBoxSizeMode.AutoSize;
             comida = pb;
             this.Controls.Add(pb);
 
         }
-
+        //Meotodo que inicia el Juego
         public void iniciarJuego()
         {
             tiempo = 10;

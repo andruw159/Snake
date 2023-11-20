@@ -43,7 +43,7 @@
             this.lblPuntos.AutoSize = true;
             this.lblPuntos.BackColor = System.Drawing.Color.Transparent;
             this.lblPuntos.Font = new System.Drawing.Font("Eras Medium ITC", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuntos.Location = new System.Drawing.Point(525, 360);
+            this.lblPuntos.Location = new System.Drawing.Point(501, 360);
             this.lblPuntos.Name = "lblPuntos";
             this.lblPuntos.Size = new System.Drawing.Size(64, 69);
             this.lblPuntos.TabIndex = 0;
@@ -56,7 +56,10 @@
             this.BackgroundImage = global::snake_Last_.Properties.Resources.backg2;
             this.ClientSize = new System.Drawing.Size(601, 438);
             this.Controls.Add(this.lblPuntos);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Snake";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Snake";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MoverPieza);
             this.ResumeLayout(false);

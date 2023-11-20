@@ -1,0 +1,9 @@
+NickName:  Pedro
+ Puntaje: 1
+ Fecha: 19/11/2023 8:35:56 p. m.
+
+ NickName:  Andy
+
+ Puntaje: 24
+
+ Fecha: 19/11/2023 9:40:22 p. m.

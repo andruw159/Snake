@@ -43,23 +43,25 @@
             this.txtRegistro.Location = new System.Drawing.Point(151, 113);
             this.txtRegistro.Multiline = true;
             this.txtRegistro.Name = "txtRegistro";
-            this.txtRegistro.Size = new System.Drawing.Size(174, 27);
+            this.txtRegistro.Size = new System.Drawing.Size(183, 27);
             this.txtRegistro.TabIndex = 0;
             this.txtRegistro.TextChanged += new System.EventHandler(this.txtRegistro_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(184, 85);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(161, 72);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 16);
+            this.label1.Size = new System.Drawing.Size(164, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ingrese su User";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(187, 164);
+            this.btnRegistrar.Location = new System.Drawing.Point(197, 165);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(95, 29);
             this.btnRegistrar.TabIndex = 2;
@@ -112,11 +114,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::snake_Last_.Properties.Resources.backgroud;
             this.ClientSize = new System.Drawing.Size(469, 469);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtRegistro);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";

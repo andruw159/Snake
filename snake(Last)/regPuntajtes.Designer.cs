@@ -28,72 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvRegPuntaje = new System.Windows.Forms.DataGridView();
-            this.UsuarioDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PuntajeDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRegPuntaje)).BeginInit();
+            this.txtregPuntajes = new System.Windows.Forms.TextBox();
+            this.btnMostrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dgvRegPuntaje
+            // txtregPuntajes
             // 
-            this.dgvRegPuntaje.AllowUserToAddRows = false;
-            this.dgvRegPuntaje.AllowUserToDeleteRows = false;
-            this.dgvRegPuntaje.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRegPuntaje.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRegPuntaje.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UsuarioDtg,
-            this.PuntajeDtg,
-            this.FechaDtg});
-            this.dgvRegPuntaje.Location = new System.Drawing.Point(34, 75);
-            this.dgvRegPuntaje.Name = "dgvRegPuntaje";
-            this.dgvRegPuntaje.ReadOnly = true;
-            this.dgvRegPuntaje.RowHeadersVisible = false;
-            this.dgvRegPuntaje.RowHeadersWidth = 51;
-            this.dgvRegPuntaje.RowTemplate.Height = 24;
-            this.dgvRegPuntaje.Size = new System.Drawing.Size(436, 217);
-            this.dgvRegPuntaje.TabIndex = 4;
-            this.dgvRegPuntaje.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRegPuntaje_CellContentClick);
+            this.txtregPuntajes.Location = new System.Drawing.Point(32, 84);
+            this.txtregPuntajes.Multiline = true;
+            this.txtregPuntajes.Name = "txtregPuntajes";
+            this.txtregPuntajes.Size = new System.Drawing.Size(499, 295);
+            this.txtregPuntajes.TabIndex = 0;
             // 
-            // UsuarioDtg
+            // btnMostrar
             // 
-            this.UsuarioDtg.HeaderText = "Usuario";
-            this.UsuarioDtg.MinimumWidth = 6;
-            this.UsuarioDtg.Name = "UsuarioDtg";
-            this.UsuarioDtg.ReadOnly = true;
-            // 
-            // PuntajeDtg
-            // 
-            this.PuntajeDtg.HeaderText = "Puntaje";
-            this.PuntajeDtg.MinimumWidth = 6;
-            this.PuntajeDtg.Name = "PuntajeDtg";
-            this.PuntajeDtg.ReadOnly = true;
-            // 
-            // FechaDtg
-            // 
-            this.FechaDtg.HeaderText = "Fecha";
-            this.FechaDtg.MinimumWidth = 6;
-            this.FechaDtg.Name = "FechaDtg";
-            this.FechaDtg.ReadOnly = true;
+            this.btnMostrar.Location = new System.Drawing.Point(179, 29);
+            this.btnMostrar.Name = "btnMostrar";
+            this.btnMostrar.Size = new System.Drawing.Size(198, 49);
+            this.btnMostrar.TabIndex = 1;
+            this.btnMostrar.Text = "Mostrar";
+            this.btnMostrar.UseVisualStyleBackColor = true;
+            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
             // regPuntajtes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::snake_Last_.Properties.Resources.backgroud;
             this.ClientSize = new System.Drawing.Size(556, 393);
-            this.Controls.Add(this.dgvRegPuntaje);
+            this.Controls.Add(this.btnMostrar);
+            this.Controls.Add(this.txtregPuntajes);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "regPuntajtes";
             this.Text = "regPuntajtes";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRegPuntaje)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvRegPuntaje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioDtg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PuntajeDtg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDtg;
+        private System.Windows.Forms.TextBox txtregPuntajes;
+        private System.Windows.Forms.Button btnMostrar;
     }
 }
