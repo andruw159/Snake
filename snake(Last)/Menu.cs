@@ -41,6 +41,7 @@ namespace snake_Last_
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
+
             Snake snc = new Snake();
             Puntajes pnt = new Puntajes();
             Registro rgc = new Registro(snc);
