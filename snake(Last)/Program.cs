@@ -16,7 +16,7 @@ namespace snake_Last_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Snake());
+            Application.Run(new Menu()); //Cambiarlo a Menu
         }
     }
 }

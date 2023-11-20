@@ -17,21 +17,62 @@ namespace snake_Last_
         int tiempo = 10;
         PictureBox comida = new PictureBox();
         String direccion = "Right"; //Dirección de la serpiente
+        
+
+        //PRUEBA PARA ACUMULAR PUNTAJE---------------------------
+
+        public delegate void PuntajeActualizadoEventHandler(object sender, EventArgs e);
+
+        // Evento que se dispara cuando el puntaje se actualiza
+        public event PuntajeActualizadoEventHandler PuntajeActualizado;
+
+        // Propiedad pública para acceder al puntaje desde el formulario principal
+        public int Puntaje { get; private set; }
+
+        Registro registroForm;
+
+        //-------------------------------
+        //PRUEBA MANTENER PUNTOS-----------
+        
+        //--------------------------------
 
         public Snake()
         {
             InitializeComponent();
             iniciarJuego();
-        }
+            //PRUEBA PUNTAJE-------
+            registroForm = new Registro(this);
+            //---------------------
 
+
+        }
+        //variable para llevar estado del metodo
+        
         public void ReiniciarJuego()
         {
-           foreach (PictureBox Serpiente in lista) { this.Controls.Remove(Serpiente); }
-            this.Controls.Remove(comida); //No va remove comida sino que hay que hacer remove la serepiente?
-           iniciarJuego();
+                // Eliminar todas las PictureBox de la serpiente
+                foreach (PictureBox Serpiente in lista)
+                {
+                    
+                    this.Controls.Remove(Serpiente);
+                    timer1.Stop();
+                    
+                    lblPuntos.Text = (0).ToString(); //Pone el marcador en 0
+                }
+                //Muestra el form para guardar el puntaje obtenido
+                registroForm.ShowDialog();
+                // Eliminar la comida
+                this.Controls.Remove(comida);
+
+            //Prueba acumular puntaje----
+            PuntajeActualizado?.Invoke(this, EventArgs.Empty);
+            // Invocar el evento JuegoReiniciado para indicar que el juego se ha reiniciado
+            
+            //----------------------------------
+
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        public void timer1_Tick(object sender, EventArgs e)
         {
             
 
@@ -59,6 +100,11 @@ namespace snake_Last_
                     lista[i].Location = new Point((lista[i].Location.X), (lista[i - 1].Location.Y));
 
                 }
+
+                //PRUEBA COLISION CON EL CUERPO--------
+                // Verificar colisión con el cuerpo
+                
+                //-----------------------
             }
             for (int contarPiezas = 1; contarPiezas < lista.Count; contarPiezas++)
             {
@@ -67,7 +113,14 @@ namespace snake_Last_
                     this.Controls.Remove(comida); //remueve la comida
                     tiempo = Convert.ToInt32(timer1.Interval);//aumenta el tiempo
                     if (tiempo > 10) { timer1.Interval = tiempo - 10; }
-                    lblPuntos.Text = (Convert.ToInt32(lblPuntos.Text) + 1).ToString();
+                    lblPuntos.Text = (Convert.ToInt32(lblPuntos.Text) + 1).ToString(); //Necesito acumular estos datos
+
+                    //PRUEBA DE ACUMULAR PUNTOS-------
+                    Puntaje++;
+                    PuntajeActualizado?.Invoke(this, EventArgs.Empty);
+                    //--------------------------------
+
+
                     crearComida();//crea nueva comida
                     crearSnake(lista, this, lista[lista.Count - 1].Location.X * sizePiezaPrincipal, 0);// Nueva parte de la snake
 
@@ -78,14 +131,13 @@ namespace snake_Last_
             {
                 ReiniciarJuego();
             }
-           
 
             //colision con el cuerpo
             for (int contarPiezas = 1; contarPiezas < lista.Count; contarPiezas++)
             {
                 if (lista[0].Bounds.IntersectsWith(lista[contarPiezas].Bounds))
                 {
-                   
+                     
                 }
             }
         }

@@ -8,3 +8,8 @@ C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).csproj
 C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).csproj.CoreCompileInputs.cache
 C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).exe
 C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake(Last).pdb
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake_Last_.Menu.resources
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake_Last_.Registro.resources
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake_Last_.Puntajes.resources
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake_Last_.regPuntajtes.resources
+C:\Users\andre\source\repos\snake(Last)\snake(Last)\obj\Debug\snake_Last_.PlayAgain.resources
