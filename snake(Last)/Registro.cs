@@ -22,7 +22,7 @@ namespace snake_Last_
             InitializeComponent();
             snakeForm = snake;
             snakeForm.PuntajeActualizado += SnakeForm_PuntajeActualizado;
-                   }
+        }
 
      
         public void SnakeForm_PuntajeActualizado(object sender, EventArgs e)
@@ -64,8 +64,6 @@ namespace snake_Last_
             registrar.Close();
 
 
-            PlayAgain prg = new PlayAgain();
-            prg.ShowDialog();
 
         }
 
@@ -82,6 +80,15 @@ namespace snake_Last_
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            this.Hide();
+            this.Close();
+            menu.ShowDialog();
+            
         }
     }
 }

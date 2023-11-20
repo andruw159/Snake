@@ -33,6 +33,7 @@ namespace snake_Last_
         {
             //Muestra formulario donde se guardan los datos del usuario, puntaje y fecha.
             regPuntajtes pnt = new regPuntajtes();
+            
             this.Hide();
             pnt.ShowDialog();
             this.Show();

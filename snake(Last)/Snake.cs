@@ -36,7 +36,7 @@ namespace snake_Last_
         {
             InitializeComponent();
             iniciarJuego();
-           
+           //Se le asigna a una variable el form Registro
             registroForm = new Registro(this);
           
 
@@ -57,6 +57,10 @@ namespace snake_Last_
                 }
                 //Muestra el form para guardar el puntaje obtenido
                 registroForm.ShowDialog();
+
+                //Cerrar el juego
+                this.Hide();
+                this.Close();
                 // Eliminar la comida
                 this.Controls.Remove(comida);
 

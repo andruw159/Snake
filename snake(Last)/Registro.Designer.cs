@@ -35,6 +35,7 @@
             this.UsuarioDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PuntajeDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCerrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             this.txtRegistro.Location = new System.Drawing.Point(151, 113);
             this.txtRegistro.Multiline = true;
             this.txtRegistro.Name = "txtRegistro";
-            this.txtRegistro.Size = new System.Drawing.Size(183, 27);
+            this.txtRegistro.Size = new System.Drawing.Size(196, 27);
             this.txtRegistro.TabIndex = 0;
             this.txtRegistro.TextChanged += new System.EventHandler(this.txtRegistro_TextChanged);
             // 
@@ -61,7 +62,7 @@
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(197, 165);
+            this.btnRegistrar.Location = new System.Drawing.Point(151, 169);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(95, 29);
             this.btnRegistrar.TabIndex = 2;
@@ -110,12 +111,23 @@
             this.FechaDtg.Name = "FechaDtg";
             this.FechaDtg.ReadOnly = true;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Location = new System.Drawing.Point(252, 169);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(95, 29);
+            this.btnCerrar.TabIndex = 4;
+            this.btnCerrar.Text = "Cerrar";
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::snake_Last_.Properties.Resources.backgroud;
             this.ClientSize = new System.Drawing.Size(469, 469);
+            this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label1);
@@ -140,5 +152,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioDtg;
         private System.Windows.Forms.DataGridViewTextBoxColumn PuntajeDtg;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaDtg;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

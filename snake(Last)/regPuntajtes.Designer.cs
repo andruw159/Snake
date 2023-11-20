@@ -28,64 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMostrar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.UsuarioDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PuntajeDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaDtg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtregPuntajes = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnMostrar
+            // txtregPuntajes
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(179, 29);
-            this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(198, 49);
-            this.btnMostrar.TabIndex = 1;
-            this.btnMostrar.Text = "Mostrar";
-            this.btnMostrar.UseVisualStyleBackColor = true;
-            this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
+            this.txtregPuntajes.Location = new System.Drawing.Point(31, 81);
+            this.txtregPuntajes.Multiline = true;
+            this.txtregPuntajes.Name = "txtregPuntajes";
+            this.txtregPuntajes.Size = new System.Drawing.Size(485, 282);
+            this.txtregPuntajes.TabIndex = 2;
+            this.txtregPuntajes.TextChanged += new System.EventHandler(this.txtregPuntaje_TextChanged);
             // 
-            // dataGridView1
+            // label1
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UsuarioDtg,
-            this.PuntajeDtg,
-            this.FechaDtg});
-            this.dataGridView1.Location = new System.Drawing.Point(58, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(436, 217);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(229, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 32);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Top 5";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // UsuarioDtg
+            // btnMenu
             // 
-            this.UsuarioDtg.HeaderText = "Usuario";
-            this.UsuarioDtg.MinimumWidth = 6;
-            this.UsuarioDtg.Name = "UsuarioDtg";
-            this.UsuarioDtg.ReadOnly = true;
-            // 
-            // PuntajeDtg
-            // 
-            this.PuntajeDtg.HeaderText = "Puntaje";
-            this.PuntajeDtg.MinimumWidth = 6;
-            this.PuntajeDtg.Name = "PuntajeDtg";
-            this.PuntajeDtg.ReadOnly = true;
-            // 
-            // FechaDtg
-            // 
-            this.FechaDtg.HeaderText = "Fecha";
-            this.FechaDtg.MinimumWidth = 6;
-            this.FechaDtg.Name = "FechaDtg";
-            this.FechaDtg.ReadOnly = true;
+            this.btnMenu.Location = new System.Drawing.Point(411, 29);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(104, 30);
+            this.btnMenu.TabIndex = 4;
+            this.btnMenu.Text = "Regresar";
+            this.btnMenu.UseVisualStyleBackColor = true;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
             // regPuntajtes
             // 
@@ -93,22 +70,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::snake_Last_.Properties.Resources.backgroud;
             this.ClientSize = new System.Drawing.Size(556, 393);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnMostrar);
+            this.Controls.Add(this.btnMenu);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtregPuntajes);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "regPuntajtes";
             this.Text = "regPuntajtes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnMostrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UsuarioDtg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PuntajeDtg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaDtg;
+        private System.Windows.Forms.TextBox txtregPuntajes;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnMenu;
     }
 }

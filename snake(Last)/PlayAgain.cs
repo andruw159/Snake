@@ -22,7 +22,6 @@ namespace snake_Last_
             Snake snake = new Snake(); 
             this.Hide();
             snake.ShowDialog();
-            snake.ReiniciarJuego();
             this.Show();
         }
 
