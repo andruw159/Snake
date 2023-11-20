@@ -20,7 +20,7 @@ namespace snake_Last_
             
             InitializeComponent();
             // Limpiar el TextBox antes de mostrar nuevos registros
-            txtregPuntajes.Clear();
+            //txtregPuntajes.Clear();
 
             // Utilizar un cuadro de texto no editable (TextBox) para mostrar los registros
             StreamReader leerRegistro = new StreamReader(@"C:\Users\andre\source\repos\snake(Last)\snake(Last)\Archivo_Puntajes.txt");
@@ -32,7 +32,7 @@ namespace snake_Last_
                 while (leer != null)
                 {
                     // Agregar la línea al cuadro de texto
-                    txtregPuntajes.AppendText(leer + "\n");
+                    //txtregPuntajes.AppendText(leer + "\n");
 
                     // Leer la próxima línea
                     leer = leerRegistro.ReadLine();
@@ -60,6 +60,11 @@ namespace snake_Last_
         private void btnMostrar_Click(object sender, EventArgs e)
         {
 
-        } 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
